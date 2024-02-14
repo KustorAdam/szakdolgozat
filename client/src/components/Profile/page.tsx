@@ -1,7 +1,6 @@
 'use client';
 
 import { useCookies } from "next-client-cookies";
-
 import React from "react";
 import { Form, Button } from "react-bootstrap"
 
