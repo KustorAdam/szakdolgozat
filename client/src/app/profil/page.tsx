@@ -10,8 +10,18 @@ export default function LoginForm() {
 
     return (
 
-<Container>
+
       <form>
+        
+        <div style={{
+            position: "absolute", top: "1rem", right: "", left: "3rem",
+            background: "cyan",
+            border: "1px solid black",
+            padding: "15rem",
+            margin: "19rem",
+            borderRadius: "5rem"
+
+        }}>
             <Form.Group className="mb-3">
                 <Form.Label>Teljsen Név</Form.Label>
                 <Form.Control 
@@ -43,8 +53,9 @@ export default function LoginForm() {
             <Form.Group>
                 <Button type="submit" variant="primary">Frissítés</Button>
             </Form.Group>
+            </div>
         </form>
-        </Container>
+        
     )
 }
 
