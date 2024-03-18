@@ -3,4 +3,5 @@ export default function snake() {
         <h1>kigyo
         </h1>
     )
+    
 }
