@@ -40,13 +40,7 @@ export default function SideMenu() {
                             </CDBSidebarMenuItem>
                         </Link>
                     </CDBSidebarMenu>
-                    <CDBSidebarMenu>
-                        <Link href="/snake">
-                            <CDBSidebarMenuItem>
-                                Hosszú a sor?
-                            </CDBSidebarMenuItem>
-                        </Link>
-                    </CDBSidebarMenu>
+                    
                     <CDBSidebarMenu>
                         <Link href="/messages">
                             <CDBSidebarMenuItem>
@@ -55,7 +49,7 @@ export default function SideMenu() {
                         </Link>
                     </CDBSidebarMenu>
                     <CDBSidebarMenu>
-                        <Link href="/user">
+                        <Link href="/profil">
                             <CDBSidebarMenuItem>
                                 Profil
                             </CDBSidebarMenuItem>
