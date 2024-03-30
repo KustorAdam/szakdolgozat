@@ -6,11 +6,11 @@ export default function register() {
     return (
 
         <div style={{
-            position: "absolute", top: ".5rem", right: ".5rem",
+            position: "absolute", top: "0.2rem", right: "12rem",
             background: "#AFD8F7",
             border: "1px solid black",
             padding: "1rem",
-            margin: "5rem",
+            margin: "10rem",
             borderRadius: ".5rem",
 
 
