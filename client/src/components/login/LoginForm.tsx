@@ -3,7 +3,8 @@ import { login } from "@/actions/loginForm";
 import { useCookies } from "next-client-cookies";
 import Notiflix from "notiflix";
 import React from "react";
-import { Form, Button } from "react-bootstrap"
+import { Form, Button, Placeholder } from "react-bootstrap"
+import { CiLineHeight } from "react-icons/ci";
 
 export default function LoginForm() {
     const cookies = useCookies();
@@ -31,22 +32,40 @@ export default function LoginForm() {
     return (
         <form action={onLogin}>
             <Form.Group className="mb-3">
-                <Form.Label>Email cím</Form.Label>
+            
+          
+                
                 <Form.Control 
+                
+                placeholder="Email cím"
                     type="email" 
                     name="email"
+                    style={{border: "2  px solid black"}}
                 />
             </Form.Group>
+
+
+
             <Form.Group className="mb-3">
-                <Form.Label>Jelszó</Form.Label>
+                
                 <Form.Control 
+                
+                placeholder="Jelszó"
                     type="password" 
                     name="password"
+                    style={{border: "2px solid black"}}
                 />
+                
+                
             </Form.Group>
+            <div style={{textAlign: "center"}}> 
+           
+              
             <Form.Group>
-                <Button type="submit" variant="primary">Bejelentkezés</Button>
+                
+                <Button type="submit" variant="primary"            >Bejelentkezés</Button>
             </Form.Group>
+            </div>
         </form>
     )
 }
