@@ -7,10 +7,19 @@ import { Form, Button, Container } from "react-bootstrap"
 
 export default function LoginForm() {
 
-
+   
+        
+  
+      
+    
+ 
+ 
+ 
     return (
 
 
+
+   
 
 
 
@@ -23,7 +32,7 @@ export default function LoginForm() {
                     padding: "11rem",
                     margin: "1rem",
                     borderRadius: "5rem",
-
+                    
 
 
                 }}>
