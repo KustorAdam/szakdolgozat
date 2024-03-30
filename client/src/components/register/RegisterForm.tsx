@@ -76,10 +76,12 @@ export default function RegisterForm() {
 
 
 
-            
+            <div style={{textAlign: "center"}}>
+                
             <Form.Group>
                 <Button type="submit" variant="primary">Bejelentkezés</Button>
             </Form.Group>
+            </div>
         </form>
     )
 }
