@@ -7,19 +7,30 @@ import { CgEnter } from 'react-icons/cg'
 
 export default function login() {
 
+
+
   return (
     <div style={{
-      position: "absolute", top: ".5rem", right: ".5rem",
+      position: "absolute", top: ".5rem", right: "10rem",
       background: "#AFD8F7",
       border: "1px solid black",
       padding: "1rem",
-      margin: "5rem",
+      margin: "10rem",
       borderRadius: ".5rem",
 
-
-
-    }}>
+         }}>
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
       <Row
+
         className='mt-10 pt-5 d-flex justify-content-center align-items-center'
       >
         <Col xs={10} md={5} lg={10} className='pb-4 pb-md-2'>
