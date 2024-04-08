@@ -2,7 +2,6 @@
 'use client';
 
 import { useCookies } from "next-client-cookies";
-
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap"
 
@@ -11,8 +10,6 @@ import { Form, Button, Container } from "react-bootstrap"
 
 export default function menu() {
     return (
-
-        
         <form>
             <div style={{
                 position: "absolute", top: "1rem", right: "", left: "17rem",
@@ -21,12 +18,7 @@ export default function menu() {
                 padding: "22rem",
                 margin: "1rem",
                 borderRadius: "5rem",
-
-
-
-
             }}>
-
                 <Form.Group>
                     <Button style={{
                         backgroundColor: "#5131de",
@@ -38,7 +30,6 @@ export default function menu() {
                         top: "20%",
                         whiteSpace: "nowrap",
                         textAlign: "center"
-
                     }} type="submit" variant="primary">Ez a hét</Button>
                 </Form.Group>
                 <Form.Group>
@@ -52,23 +43,10 @@ export default function menu() {
                         top: "20%",
                         whiteSpace: "nowrap",
                         textAlign: "center"
-
                     }} type="submit" variant="primary">Jövő hét</Button>
                 </Form.Group>
-
-
-
-
-
-
-
-
             </div>
-
         </form>
-
-
-
     )
 
 }
