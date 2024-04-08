@@ -1,22 +1,9 @@
 import { Container } from "react-bootstrap";
 import React from "react";
-import Nav from "@/components/Nav/nav"
-
-
-
-
-
-
-
-
-
 
 
 export default function Home() {
   return ( 
-
-
-
     <><div style={{
       position: "absolute", bottom: "13rem", left: "10rem",
       background: "#AFD8F7",
@@ -44,7 +31,5 @@ export default function Home() {
       width: "40rem",
       height: "20rem"
     }}> </div></>
-  
-
   )
 }
