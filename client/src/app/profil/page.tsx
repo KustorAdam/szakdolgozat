@@ -7,21 +7,7 @@ import { Form, Button, Container } from "react-bootstrap"
 
 export default function LoginForm() {
 
-   
-        
-  
-      
-    
- 
- 
- 
     return (
-
-
-
-   
-
-
 
         <form>
 
@@ -32,8 +18,6 @@ export default function LoginForm() {
                     padding: "11rem",
                     margin: "1rem",
                     borderRadius: "5rem",
-                    
-
 
                 }}>
                 <Form.Group className="mb-3">
@@ -43,7 +27,6 @@ export default function LoginForm() {
                         <Form.Label>Teljsen Név</Form.Label>
                     </div>
                     <Form.Control
-
                         type="name"
                         name="Nev"
                     />
@@ -74,12 +57,7 @@ export default function LoginForm() {
                         type="phonenumber"
                         name="dszam"
                     />
-
-
-
-
                 </Form.Group>
-
                 <Form.Group>
                     <Button type="submit" variant="primary">Frissítés</Button>
                 </Form.Group>
