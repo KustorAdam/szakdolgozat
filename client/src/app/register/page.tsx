@@ -12,7 +12,8 @@ export default function register() {
             padding: "1rem",
             margin: "10rem",
             borderRadius: ".5rem",
-
+            boxShadow: "2px 2px 5px",
+            width: "300px"
 
 
         }}>
@@ -20,7 +21,9 @@ export default function register() {
                 className='mt-10 pt-5 d-flex justify-content-center align-items-center'
             >
                 <Col xs={10} md={5} lg={10} className='pb-4 pb-md-2'>
-                    <h2>Regisztráció</h2>
+                    <h2 style={{
+                        textAlign: "center",
+                    }}>Regisztráció</h2>
                 </Col>
 
 
@@ -51,7 +54,7 @@ export default function register() {
                         textAlign: 'center'
 
 
-                    }}>Már van fiókja? <Link href="/login">Jelentkezzen be!</Link></h2>
+                    }}>Már van fiókja? <Link href="/">Jelentkezzen be!</Link></h2>
 
 
                 </Col>
