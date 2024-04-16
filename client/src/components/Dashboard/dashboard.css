@@ -1,0 +1,9 @@
+.sidebar {
+    margin: auto !important;
+    width: 70px !important;
+    border: 2px lightgray !important;
+    background-color: rgb(66, 79, 18) !important;
+    padding-left: 20px !important;
+}
+
+.link 

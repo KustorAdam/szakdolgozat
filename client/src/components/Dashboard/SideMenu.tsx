@@ -6,15 +6,16 @@ import { useCookies } from "next-client-cookies";
 import Link from "next/link";
 
 
+
 export default function SideMenu() {
     const t = useCookies();
 
     return (
-        <div className="d-flex" style={{height: '100vh', overflow: 'scroll initial'}}>
-            <Sidebar>
+        <div className="d-flex" style={{ height: '100px', overflow: 'scroll initial' }}>
+            <Sidebar backgroundColor="#00bbf0">
                 <Menu>
-                    <MenuItem>
-                        <Link href="/">
+                    <MenuItem className="sidebar">
+                        <Link href="/login">
                             Főoldal
                         </Link>
                     </MenuItem>
@@ -29,13 +30,18 @@ export default function SideMenu() {
                         </Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link href="/profile">
+                        <Link href="/profil">
                             Profil
                         </Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link href="/login">
+                        <Link href="/">
                             Kijelentkezés
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link href="/admin">
+                            Admin
                         </Link>
                     </MenuItem>
                 </Menu>

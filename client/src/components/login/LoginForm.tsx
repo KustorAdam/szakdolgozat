@@ -11,7 +11,7 @@ export default function LoginForm() {
 
     async function onLogin(formData: FormData) {
         const res = await login(formData);
-        
+
         if (!res.error) {
             cookies.set("user", JSON.stringify(res));
             Notiflix.Notify.success("Sikeres bejelentkezés!", () => {
@@ -31,40 +31,44 @@ export default function LoginForm() {
 
     return (
         <form action={onLogin}>
-            <Form.Group className="mb-3">
-            
-          
-                
-                <Form.Control 
-                
-                placeholder="Email cím"
-                    type="email" 
+            <Form.Group style={{
+                textAlign: 'center'
+            }} className="mb-3">
+
+
+
+                <Form.Control
+
+                    placeholder="Email cím"
+                    type="email"
                     name="email"
-                    style={{border: "2  px solid black"}}
+
                 />
             </Form.Group>
 
 
 
-            <Form.Group className="mb-3">
-                
-                <Form.Control 
-                
-                placeholder="Jelszó"
-                    type="password" 
+            <Form.Group style={{
+                textAlign: 'center'
+            }} className="mb-3">
+
+                <Form.Control
+
+                    placeholder="Jelszó"
+                    type="password"
                     name="password"
-                    style={{border: "2px solid black"}}
+
                 />
-                
-                
+
+
             </Form.Group>
-            <div style={{textAlign: "center"}}> 
-           
-              
-            <Form.Group>
-                
-                <Button type="submit" variant="primary"            >Bejelentkezés</Button>
-            </Form.Group>
+            <div style={{ textAlign: "center" }}>
+
+
+                <Form.Group>
+
+                    <Button type="submit" variant="primary"            >Bejelentkezés</Button>
+                </Form.Group>
             </div>
         </form>
     )
