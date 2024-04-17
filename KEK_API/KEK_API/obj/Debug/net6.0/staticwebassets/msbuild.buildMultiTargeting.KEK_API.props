@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KEK_API.props" />
+</Project>
