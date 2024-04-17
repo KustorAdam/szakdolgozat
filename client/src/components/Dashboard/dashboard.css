@@ -2,6 +2,15 @@
     margin: auto !important;
     width: 70px !important;
     border: 2px lightgray !important;
+
+    background-color: rgb(39, 53, 53) !important;
+    padding-left: 20px !important;
+}
+
+.link {
+    text-decoration: none  ;
+}
+
     background-color: aqua !important;
     padding-left: 20px !important;
 }

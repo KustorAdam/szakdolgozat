@@ -9,7 +9,11 @@ namespace APIModels.Models
     public class LoginResponse
     {
         public string Token { get; set; }
+
+        public int OM {  get; set; }
+
         public string Name { get; set; }
+
         public string Email { get; set; }
 
         public IEnumerable<int> Roles { get; set; }

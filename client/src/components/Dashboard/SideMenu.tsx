@@ -1,4 +1,11 @@
-'use client'
+'use client';
+
+
+import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { useCookies } from "next-client-cookies";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@/styles/dashboard.css'
+import Link from "next/link";
 
 import React from "react";
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
@@ -12,16 +19,27 @@ export default function SideMenu() {
 
     return (
         <div className="d-flex" style={{height: '100vh', overflow: 'scroll initial'}}>
+
+            <Sidebar className="sidebar">
+                <Menu>
+                    <MenuItem>
+
             <Sidebar backgroundColor="#00bbf0">
                 <Menu>
                     <MenuItem className="sidebar">
+
                         <Link href="/">
                             Főoldal
                         </Link>
                     </MenuItem>
                     <MenuItem>
+
+                        <Link href={"/menu/"}>
+                            
+
                         <Link href="/menu">
                             Heti Menü
+
                         </Link>
                     </MenuItem>
                     <MenuItem>
@@ -40,7 +58,12 @@ export default function SideMenu() {
                         </Link>
                     </MenuItem>
                 </Menu>
+
+             </Sidebar>
+       </div>
+
             </Sidebar>
         </div>
+
     )
 }
