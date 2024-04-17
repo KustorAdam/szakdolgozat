@@ -55,25 +55,19 @@ namespace KEK_API.Services
             }
             if (string.IsNullOrEmpty(reg.ParentName)) 
             {
-                throw new MandatoryPropertyEmptyException("ParentName");
+                throw new MandatoryPropertyEmptyException("Parent Name");
             }
+            if (string.IsNullOrEmpty(reg.ParentPhone))
+            {
+                throw new MandatoryPropertyEmptyException("Parent Phone");
+            }    
 
             string OM_num = reg.OM.ToString();
-            string PPhone = reg.ParentPhone.ToString();
 
             if (string.IsNullOrEmpty(OM_num))
             {
                 throw new MandatoryPropertyEmptyException("OM");
             }
-
-            if (string.IsNullOrEmpty(PPhone))
-            {
-                throw new MandatoryPropertyEmptyException("Parent's Phone");
-            }
-
-            if ()
-
-
 
             if (string.IsNullOrEmpty(reg.Email))
             this._sql.Users.Add(new User()
