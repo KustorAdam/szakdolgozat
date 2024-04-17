@@ -1,4 +1,5 @@
 ﻿using KEK_API.Interfaces;
+using Microsoft.IdentityModel.Tokens;
 
 namespace KEK_API.Services
 {
@@ -29,7 +30,7 @@ namespace KEK_API.Services
                     return new LoginResponse()
                     {
                         Email = login.Email,
-                        Name = user.Name,
+                        OM = user.OM,
                         Roles = user.Roles,
                         Token = _tokenService.CreateToken(user)
                     };
@@ -52,6 +53,29 @@ namespace KEK_API.Services
             {
                 throw new MandatoryPropertyEmptyException("Password");
             }
+            if (string.IsNullOrEmpty(reg.ParentName)) 
+            {
+                throw new MandatoryPropertyEmptyException("ParentName");
+            }
+
+            string OM_num = reg.OM.ToString();
+            string PPhone = reg.ParentPhone.ToString();
+
+            if (string.IsNullOrEmpty(OM_num))
+            {
+                throw new MandatoryPropertyEmptyException("OM");
+            }
+
+            if (string.IsNullOrEmpty(PPhone))
+            {
+                throw new MandatoryPropertyEmptyException("Parent's Phone");
+            }
+
+            if ()
+
+
+
+            if (string.IsNullOrEmpty(reg.Email))
             this._sql.Users.Add(new User()
             {
                 Email = reg.Email,
