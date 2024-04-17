@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KEK_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a9bf50ac3cbe3f355b5fda45e90f85fd8c91190")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KEK_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KEK_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
