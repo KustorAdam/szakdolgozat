@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DB_Module.Models
 {
-    [Table("WeaklySpecial")]
+    [Table("WeeklySpecial")]
     public class WeeklySpecial
     {
         [Required][Key] public int Id { get; set; }
