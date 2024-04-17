@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DB_Module.Models
 {
-    [Table("lemondasok")]
+    [Table("Cancelation")]
     public class Cancelation
     {
         [Required][Key] public int Id { get; set; }
