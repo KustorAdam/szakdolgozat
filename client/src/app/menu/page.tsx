@@ -13,6 +13,7 @@ export default function menu() {
         <form>
 
 
+
           
 
             <Form.Group>
@@ -273,6 +274,42 @@ export default function menu() {
             </div>
                     
 
+
+            <div style={{
+                position: "absolute", top: "1rem", right: "", left: "17rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "22rem",
+                margin: "1rem",
+                borderRadius: "5rem",
+            }}>
+                <Form.Group>
+                    <Button style={{
+                        backgroundColor: "#5131de",
+                        borderColor: "#5131de",
+                        float: "right",
+                        position: "absolute",
+                        right: "70%",
+                        marginLeft: "91%",
+                        top: "20%",
+                        whiteSpace: "nowrap",
+                        textAlign: "center"
+                    }} type="submit" variant="primary">Ez a hét</Button>
+                </Form.Group>
+                <Form.Group>
+                    <Button style={{
+                        backgroundColor: "#5131de",
+                        borderColor: "#5131de",
+                        float: "right",
+                        position: "absolute",
+                        right: "20%",
+                        marginLeft: "91%",
+                        top: "20%",
+                        whiteSpace: "nowrap",
+                        textAlign: "center"
+                    }} type="submit" variant="primary">Jövő hét</Button>
+                </Form.Group>
+            </div>
         </form>
     )
 

@@ -1,0 +1,3 @@
+.dash_link:hover::after {
+    opacity: 1;
+}
