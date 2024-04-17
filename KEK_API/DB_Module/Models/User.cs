@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DB_Module.Models
 {
-    [Table("diakok")]
+    [Table("Students")]
     public class User
     {
         [Required][Key] public Guid Id { get; set; } = Guid.NewGuid();
