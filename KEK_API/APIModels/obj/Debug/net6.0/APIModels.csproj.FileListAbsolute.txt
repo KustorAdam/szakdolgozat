@@ -9,3 +9,15 @@ C:\Users\kusto\Documents\Visual Studio\KEK_API\APIModels\obj\Debug\net6.0\APIMod
 C:\Users\kusto\Documents\Visual Studio\KEK_API\APIModels\obj\Debug\net6.0\refint\APIModels.dll
 C:\Users\kusto\Documents\Visual Studio\KEK_API\APIModels\obj\Debug\net6.0\APIModels.pdb
 C:\Users\kusto\Documents\Visual Studio\KEK_API\APIModels\obj\Debug\net6.0\ref\APIModels.dll
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\bin\Debug\net6.0\APIModels.deps.json
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\bin\Debug\net6.0\APIModels.dll
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\bin\Debug\net6.0\APIModels.pdb
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.AssemblyInfoInputs.cache
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.AssemblyInfo.cs
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.csproj.CoreCompileInputs.cache
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.sourcelink.json
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.dll
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\refint\APIModels.dll
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\APIModels.pdb
+C:\laragon\www\szakdolgozat\KEK_API\APIModels\obj\Debug\net6.0\ref\APIModels.dll
