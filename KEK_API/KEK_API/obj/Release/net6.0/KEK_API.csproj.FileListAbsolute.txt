@@ -1,7 +1,0 @@
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.csproj.AssemblyReference.cache
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.AssemblyInfoInputs.cache
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.AssemblyInfo.cs
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.csproj.CoreCompileInputs.cache
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\kusto\Documents\Visual Studio\KEK_API\KEK_API\obj\Release\net6.0\KEK_API.MvcApplicationPartsAssemblyInfo.cache
