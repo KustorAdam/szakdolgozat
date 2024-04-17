@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useCookies } from "next-client-cookies";
@@ -8,18 +7,16 @@ import { Form, Button, Container, Card } from "react-bootstrap"
 
 
 
-export default function menu() {
+export default function menu2() {
     return (
         <form>
 
-
-
-          
+      
 
             <Form.Group>
-                <Button disabled={true} style={{
+                <Button href="/menu" style={{
                     boxShadow: "2px 2px 5px",
-                    backgroundColor: "gray",
+                    backgroundColor: "#5131de",
                     borderColor: "#5131de",
                     float: "right",
                     position: "absolute",
@@ -33,14 +30,14 @@ export default function menu() {
                     height: "60px",
                     color: "black",
                     fontSize: "15px",
-                    
+                    lineHeight: "60px"
 
-                }} type="submit" variant="primary">Ez a hét</Button>
+                }} type="submit" variant="primary" >Ez a hét</Button>
             </Form.Group>
             <Form.Group>
-                <Button href="/menu2" style={{
+                <Button disabled={true} style={{
                     boxShadow: "2px 2px 5px",
-                    backgroundColor: "#5131de",
+                    backgroundColor: "gray",
                     borderColor: "#5131de",
                     float: "right",
                     position: "absolute",
@@ -52,13 +49,12 @@ export default function menu() {
                     width: "80px",
                     height: "60px",
                     color: "black",
-                    fontSize: "15px",
-                    lineHeight: "60px"
+                    fontSize: "15px"
                 }} type="submit" variant="primary">Jövő hét</Button>
             </Form.Group>
 
 
-            <Button href="/menu/napok/hetfo">
+            <Button href="/menu2/napok2/hetfo2">
                 <Card style={{
                     boxShadow: "2px 2px 5px",
                     position: "absolute", top: "4rem", right: "", left: " 7rem",
@@ -94,7 +90,7 @@ export default function menu() {
 
                 </Card>
             </Button>
-            <Button href="/menu/napok/kedd">
+            <Button href="/menu2/napok2/kedd2">
                 <Card style={{
                     boxShadow: "2px 2px 5px",
                     position: "absolute", top: "4rem", right: "", left: " 22rem",
@@ -129,7 +125,7 @@ export default function menu() {
                     }}>Vacsora </label>
                 </Card>
             </Button>
-            <Button href="/menu/napok/szerda">
+            <Button href="/menu2/napok2/szerda2">
                 <Card style={{
                     boxShadow: "2px 2px 5px",
                     position: "absolute", top: "4rem", right: "", left: " 37rem",
@@ -165,7 +161,7 @@ export default function menu() {
                     }}>Vacsora </label>
                 </Card>
             </Button>
-            <Button href="/menu/napok/csutortok">
+            <Button href="/menu2/napok2/csutortok2">
                 <Card style={{
                     boxShadow: "2px 2px 5px",
                     position: "absolute", top: "4rem", right: "", left: " 52rem",
@@ -200,7 +196,7 @@ export default function menu() {
                     }}>Vacsora </label>
                 </Card>
             </Button>
-            <Button href="/menu/napok/pentek">
+            <Button href="/menu2/napok2/pentek2">
                 <Card style={{
                     boxShadow: "2px 2px 5px",
                     position: "absolute", top: "4rem", right: "", left: " 67rem",
@@ -258,58 +254,22 @@ export default function menu() {
                 position: "absolute", top: "-20px", right: "", left: "0px",
                 background: "#12427c",
                 border: "1px solid black",
-                padding: "50px",             
-               boxShadow: "2px 2px 5px",
+                padding: "50px",
+                boxShadow: "2px 2px 5px",
                 height: "px",
                 width: "1379px"
-            
-            }}> 
-            <label style={{
-                position: "absolute",
-                color: "black",
-                right: "60px",
-                top: "47px",
-                fontSize: "20px"
-            }}>Csabás Csaba</label>
-            </div>
-                    
 
-
-            <div style={{
-                position: "absolute", top: "1rem", right: "", left: "17rem",
-                background: "#12427c",
-                border: "1px solid black",
-                padding: "22rem",
-                margin: "1rem",
-                borderRadius: "5rem",
             }}>
-                <Form.Group>
-                    <Button style={{
-                        backgroundColor: "#5131de",
-                        borderColor: "#5131de",
-                        float: "right",
-                        position: "absolute",
-                        right: "70%",
-                        marginLeft: "91%",
-                        top: "20%",
-                        whiteSpace: "nowrap",
-                        textAlign: "center"
-                    }} type="submit" variant="primary">Ez a hét</Button>
-                </Form.Group>
-                <Form.Group>
-                    <Button style={{
-                        backgroundColor: "#5131de",
-                        borderColor: "#5131de",
-                        float: "right",
-                        position: "absolute",
-                        right: "20%",
-                        marginLeft: "91%",
-                        top: "20%",
-                        whiteSpace: "nowrap",
-                        textAlign: "center"
-                    }} type="submit" variant="primary">Jövő hét</Button>
-                </Form.Group>
+                <label style={{
+                    position: "absolute",
+                    color: "black",
+                    right: "60px",
+                    top: "47px",
+                    fontSize: "20px"
+                }}>Jenős Jenő</label>
             </div>
+
+
         </form>
     )
 

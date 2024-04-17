@@ -18,6 +18,13 @@ export default function SideMenu() {
     const t = useCookies();
 
     return (
+
+        <div className="d-flex" style={{ height: '100px', overflow: 'scroll initial' }}>
+            <Sidebar backgroundColor="#00bbf0">
+                <Menu>
+                    <MenuItem className="sidebar">
+                        <Link href="/login">
+
         <div className="d-flex" style={{height: '100vh', overflow: 'scroll initial'}}>
 
             <Sidebar className="sidebar">
@@ -29,6 +36,7 @@ export default function SideMenu() {
                     <MenuItem className="sidebar">
 
                         <Link href="/">
+
                             Főoldal
                         </Link>
                     </MenuItem>
@@ -53,8 +61,13 @@ export default function SideMenu() {
                         </Link>
                     </MenuItem>
                     <MenuItem>
-                        <Link href="/login">
+                        <Link href="/">
                             Kijelentkezés
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link href="/admin">
+                            Admin
                         </Link>
                     </MenuItem>
                 </Menu>
