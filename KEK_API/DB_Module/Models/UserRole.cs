@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DB_Module.Models
 {
-    [Table("userroles")]
+    [Table("UserRoles")]
     public class UserRole
     {
         [Required] public Guid UserId { get; set; }
