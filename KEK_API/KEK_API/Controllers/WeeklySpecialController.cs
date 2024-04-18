@@ -8,12 +8,12 @@ namespace KEK_API.Controllers
     public class WeeklySpecialController : Controller
     {
         private readonly SQL _sql;
-        private WeeklySpecialService _weeklySpecial;
+        private WeeklySpecialService _weeklySpecialService;
 
         public WeeklySpecialController(SQL sql, WeeklySpecialService weeklySpecial)
         {
             _sql = sql;
-            _weeklySpecial = weeklySpecial;
+            _weeklySpecialService = weeklySpecial;
         }
 
         [HttpGet("/GetWeeklySpecial/{id:int}")]
@@ -23,7 +23,7 @@ namespace KEK_API.Controllers
             {
                 var res = new GenericResponse<WeeklySpecial>
                 {
-                    Data = _weeklySpecial.GetWeeklySpecial(id),
+                    Data = _weeklySpecialService.GetWeeklySpecial(id),
                     QueryIsSuccess = true
                 };
                 return Ok(res);
@@ -61,7 +61,7 @@ namespace KEK_API.Controllers
         {
             try
             {
-                await _weeklySpecial.AddWeeklySpecial(weeklySpecial);
+                await _weeklySpecialService.AddWeeklySpecial(weeklySpecial);
                 return StatusCode(201);
             }
             catch (ItemAlreadyExistsException e)
@@ -79,7 +79,7 @@ namespace KEK_API.Controllers
         {
             try
             {
-                await _weeklySpecial.UpdateWeeklySpecial(weeklyspecial);
+                await _weeklySpecialService.UpdateWeeklySpecial(weeklyspecial);
                 return Ok();
             }
             catch (ItemNotFoundException e)
@@ -93,7 +93,7 @@ namespace KEK_API.Controllers
         {
             try
             {
-                await _weeklySpecial.DeleteWeeklySpecial(id);
+                await _weeklySpecialService.DeleteWeeklySpecial(id);
                 return Ok();
             }
             catch (ItemNotFoundException e)
