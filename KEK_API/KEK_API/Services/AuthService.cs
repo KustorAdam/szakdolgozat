@@ -1,4 +1,5 @@
-﻿using KEK_API.Interfaces;
+using KEK_API.Interfaces;
+
 using Microsoft.IdentityModel.Tokens;
 
 namespace KEK_API.Services
@@ -54,6 +55,7 @@ namespace KEK_API.Services
             {
                 throw new MandatoryPropertyEmptyException("Password");
             }
+
             if (string.IsNullOrEmpty(reg.ParentName)) 
             {
                 throw new MandatoryPropertyEmptyException("Parent Name");
@@ -71,6 +73,7 @@ namespace KEK_API.Services
             }
 
             if (string.IsNullOrEmpty(reg.Email))
+
             this._sql.Users.Add(new User()
             {
                 Email = reg.Email,
