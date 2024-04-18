@@ -1,6 +1,6 @@
 ﻿namespace KEK_API.Interfaces
 {
-    public interface IFoodService
+    public interface IWeeklySpecialService
     {
         public Task AddWeeklySpecial(WeeklySpecial special);
         public WeeklySpecial GetWeeklySpecial(int id);

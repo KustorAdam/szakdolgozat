@@ -3,14 +3,19 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace KEK_API.Controllers
 {
-    [Route("/WeeklySpecial")]
+    [Route("api/[controller]")]
     [ApiController]
     public class WeeklySpecialController : Controller
     {
         private readonly SQL _sql;
-        private WeeklySpecial _weeklySpecial;
+        private WeeklySpecialService _weeklySpecial;
 
-        public WeeklySpecialController(SQL sql, WeeklySpecial weeklySpecial)
+        public WeeklySpecialController(IWeeklySpecialService weeklySpecialService)
+        {
+
+        }
+
+        public WeeklySpecialController(SQL sql, WeeklySpecialService weeklySpecial)
         {
             _sql = sql;
             _weeklySpecial = weeklySpecial;
@@ -38,8 +43,8 @@ namespace KEK_API.Controllers
             }
         }
 
-        [HttpGet("/WeeklySpecial")]
-        public IActionResult GetAllFood()
+        [HttpGet("/GetAllWeeklySpecial")]
+        public IActionResult GetAllWeeklySpecial()
         {
             try
             {
@@ -56,12 +61,12 @@ namespace KEK_API.Controllers
             }
         }
 
-        [HttpPost("AddFood")]
-        public async Task<IActionResult> AddFood([FromBody]WeeklySpecial weeklySpecial)
+        [HttpPost("AddWeeklySpecial")]
+        public async Task<IActionResult> AddWeeklySpecial([FromBody]WeeklySpecial weeklySpecial)
         {
             try
             {
-                await _foodService.AddFood(weeklySpecial);
+                await _weeklySpecial.AddWeeklySpecial(weeklySpecial);
                 return StatusCode(201);
             }
             catch (ItemAlreadyExistsException e)
@@ -79,7 +84,7 @@ namespace KEK_API.Controllers
         {
             try
             {
-                await _foodService.UpdateFood(weeklyspecial);
+                await _weeklySpecial.UpdateWeeklySpecial(weeklyspecial);
                 return Ok();
             }
             catch (ItemNotFoundException e)
@@ -93,7 +98,7 @@ namespace KEK_API.Controllers
         {
             try
             {
-                await _foodService.RemoveFood(id);
+                await _weeklySpecial.DeleteWeeklySpecial(id);
                 return Ok();
             }
             catch (ItemNotFoundException e)
