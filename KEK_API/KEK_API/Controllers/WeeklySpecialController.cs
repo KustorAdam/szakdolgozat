@@ -10,11 +10,6 @@ namespace KEK_API.Controllers
         private readonly SQL _sql;
         private WeeklySpecialService _weeklySpecial;
 
-        public WeeklySpecialController(IWeeklySpecialService weeklySpecialService)
-        {
-
-        }
-
         public WeeklySpecialController(SQL sql, WeeklySpecialService weeklySpecial)
         {
             _sql = sql;

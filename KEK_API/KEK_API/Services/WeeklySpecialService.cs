@@ -12,9 +12,9 @@ namespace KEK_API.Services
             _sql = sql;
         }
 
-        public async Task AddWeeklySpecial(WeeklySpecial special)
+        public async Task AddWeeklySpecial(WeeklySpecial weeklySpecial)
         {
-            _sql.WeeklySpecials.Add(special);
+            _sql.WeeklySpecials.Add(weeklySpecial);
             await _sql.SaveChangesAsync();
         }
 
