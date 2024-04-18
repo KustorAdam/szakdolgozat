@@ -11,7 +11,7 @@ export default function menu2() {
     return (
         <form>
 
-      
+
 
             <Form.Group>
                 <Button href="/menu" style={{
@@ -54,184 +54,217 @@ export default function menu2() {
             </Form.Group>
 
 
-            <Button href="/menu2/napok2/hetfo2">
-                <Card style={{
-                    boxShadow: "2px 2px 5px",
-                    position: "absolute", top: "4rem", right: "", left: " 7rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "1rem",
-                    margin: "11rem",
-                    borderRadius: "2rem",
-                    width: "180px",
-                    height: "300px"
-                }}>
-                    <label style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "85px",
-                        color: "black"
-                    }}>Hetfő </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "80px",
-                        color: "black"
-                    }}>Reggeli </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "160px",
-                        color: "black"
-                    }}>Ebéd </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "240px",
-                        color: "black"
-                    }}>Vacsora </label>
 
-                </Card>
-            </Button>
-            <Button href="/menu2/napok2/kedd2">
-                <Card style={{
-                    boxShadow: "2px 2px 5px",
-                    position: "absolute", top: "4rem", right: "", left: " 22rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "1rem",
-                    margin: "11rem",
-                    borderRadius: "2rem",
-                    width: "180px",
-                    height: "300px"
-                }}>
-                    <label style={{
+            <Card style={{
+                boxShadow: "2px 2px 5px",
+                position: "absolute", top: "4rem", right: "", left: " 7rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "1rem",
+                margin: "11rem",
+                borderRadius: "2rem",
+                width: "180px",
+                height: "300px"
+            }}>
+                <div>
+                    <input style={{
                         position: "absolute",
-                        top: "10px",
-                        right: "85px",
-                        color: "black"
-                    }}>Kedd </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "80px",
-                        color: "black"
-                    }}>Reggeli </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "160px",
-                        color: "black"
-                    }}>Ebéd </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "240px",
-                        color: "black"
-                    }}>Vacsora </label>
-                </Card>
-            </Button>
-            <Button href="/menu2/napok2/szerda2">
-                <Card style={{
-                    boxShadow: "2px 2px 5px",
-                    position: "absolute", top: "4rem", right: "", left: " 37rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "1rem",
-                    margin: "11rem",
-                    borderRadius: "2rem",
-                    width: "180px",
-                    height: "300px"
-                }}>
+                        top: "px",
+                        left: "px",
+                    }} type="checkbox" />
+                </div>
+                <label style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "85px",
+                    color: "black"
+                }}>Hetfő </label>
+                <label style={{
+                    position: "absolute",
+                    top: "80px",
+                    color: "black"
+                }}>Reggeli </label>
+                <label style={{
+                    position: "absolute",
+                    top: "160px",
+                    color: "black"
+                }}>Ebéd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "240px",
+                    color: "black"
+                }}>Vacsora </label>
 
-                    <label style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "85px",
-                        color: "black"
-                    }}>Szerda </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "80px",
-                        color: "black"
-                    }}>Reggeli </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "160px",
-                        color: "black"
-                    }}>Ebéd </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "240px",
-                        color: "black"
-                    }}>Vacsora </label>
-                </Card>
-            </Button>
-            <Button href="/menu2/napok2/csutortok2">
-                <Card style={{
-                    boxShadow: "2px 2px 5px",
-                    position: "absolute", top: "4rem", right: "", left: " 52rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "1rem",
-                    margin: "11rem",
-                    borderRadius: "2rem",
-                    width: "180px",
-                    height: "300px"
-                }}>
-                    <label style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "70px",
-                        color: "black"
-                    }}>Csütörtök </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "80px",
-                        color: "black"
-                    }}>Reggeli </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "160px",
-                        color: "black"
-                    }}>Ebéd </label>
-                    <label style={{
-                        position: "absolute",
-                        top: "240px",
-                        color: "black"
-                    }}>Vacsora </label>
-                </Card>
-            </Button>
-            <Button href="/menu2/napok2/pentek2">
-                <Card style={{
-                    boxShadow: "2px 2px 5px",
-                    position: "absolute", top: "4rem", right: "", left: " 67rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "1rem",
-                    margin: "11rem",
-                    borderRadius: "2rem",
-                    width: "180px",
-                    height: "300px"
+            </Card>
 
-                }}>
-                    <label style={{
+            <Card style={{
+                boxShadow: "2px 2px 5px",
+                position: "absolute", top: "4rem", right: "", left: " 22rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "1rem",
+                margin: "11rem",
+                borderRadius: "2rem",
+                width: "180px",
+                height: "300px"
+            }}>
+                <div>
+                    <input style={{
                         position: "absolute",
-                        top: "10px",
-                        right: "80px",
-                        color: "black"
-                    }}>Péntek </label>
-                    <label style={{
+                        top: "px",
+                        left: "px",
+                    }} type="checkbox" />
+                </div>
+                <label style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "85px",
+                    color: "black"
+                }}>Kedd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "80px",
+                    color: "black"
+                }}>Reggeli </label>
+                <label style={{
+                    position: "absolute",
+                    top: "160px",
+                    color: "black"
+                }}>Ebéd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "240px",
+                    color: "black"
+                }}>Vacsora </label>
+            </Card>
+
+
+            <Card style={{
+                boxShadow: "2px 2px 5px",
+                position: "absolute", top: "4rem", right: "", left: " 37rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "1rem",
+                margin: "11rem",
+                borderRadius: "2rem",
+                width: "180px",
+                height: "300px"
+            }}>
+                <div>
+                    <input style={{
                         position: "absolute",
-                        top: "80px",
-                        color: "black"
-                    }}>Reggeli </label>
-                    <label style={{
+                        top: "px",
+                        left: "px",
+                    }} type="checkbox" />
+                </div>
+                <label style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "85px",
+                    color: "black"
+                }}>Szerda </label>
+                <label style={{
+                    position: "absolute",
+                    top: "80px",
+                    color: "black"
+                }}>Reggeli </label>
+                <label style={{
+                    position: "absolute",
+                    top: "160px",
+                    color: "black"
+                }}>Ebéd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "240px",
+                    color: "black"
+                }}>Vacsora </label>
+            </Card>
+
+
+            <Card style={{
+                boxShadow: "2px 2px 5px",
+                position: "absolute", top: "4rem", right: "", left: " 52rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "1rem",
+                margin: "11rem",
+                borderRadius: "2rem",
+                width: "180px",
+                height: "300px"
+            }}>
+                <div>
+                    <input style={{
                         position: "absolute",
-                        top: "160px",
-                        color: "black"
-                    }}>Ebéd </label>
-                    <label style={{
+                        top: "px",
+                        left: "px",
+                    }} type="checkbox" />
+                </div>
+                <label style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "70px",
+                    color: "black"
+                }}>Csütörtök </label>
+                <label style={{
+                    position: "absolute",
+                    top: "80px",
+                    color: "black"
+                }}>Reggeli </label>
+                <label style={{
+                    position: "absolute",
+                    top: "160px",
+                    color: "black"
+                }}>Ebéd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "240px",
+                    color: "black"
+                }}>Vacsora </label>
+            </Card>
+
+
+            <Card style={{
+                boxShadow: "2px 2px 5px",
+                position: "absolute", top: "4rem", right: "", left: " 67rem",
+                background: "#12427c",
+                border: "1px solid black",
+                padding: "1rem",
+                margin: "11rem",
+                borderRadius: "2rem",
+                width: "180px",
+                height: "300px"
+
+            }}>
+                <div>
+                    <input style={{
                         position: "absolute",
-                        top: "240px",
-                        color: "black"
-                    }}>Vacsora </label>
-                </Card>
-            </Button>
+                        top: "px",
+                        left: "px",
+                    }} type="checkbox" />
+                </div>
+                <label style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "80px",
+                    color: "black"
+                }}>Péntek </label>
+                <label style={{
+                    position: "absolute",
+                    top: "80px",
+                    color: "black"
+                }}>Reggeli </label>
+                <label style={{
+                    position: "absolute",
+                    top: "160px",
+                    color: "black"
+                }}>Ebéd </label>
+                <label style={{
+                    position: "absolute",
+                    top: "240px",
+                    color: "black"
+                }}>Vacsora </label>
+            </Card>
+
             <Form.Group>
                 <Button style={{
                     backgroundColor: "#5131de",
