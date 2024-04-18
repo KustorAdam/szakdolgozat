@@ -3,50 +3,45 @@ using KEK_API.Interfaces;
 
 namespace KEK_API.Services
 {
-    public class FoodService : IFoodService
+    public class WeeklySpecialService : IWeeklySpecialService
     {
         private SQL _sql;
 
-        public FoodService(SQL sql)
+        public WeeklySpecialService(SQL sql)
         {
             _sql = sql;
         }
 
-        public async Task AddFood(WeeklySpecial special)
+        public async Task AddWeeklySpecial(WeeklySpecial special)
         {
             _sql.WeeklySpecials.Add(special);
             await _sql.SaveChangesAsync();
         }
 
-        public WeeklySpecial GetFood(int id)
+        public WeeklySpecial GetWeeklySpecial(int id)
         {
             if (!_sql.WeeklySpecials.Any(x => x.Id == id)) throw new ItemNotFoundException();
-            var bevarage = _sql.WeeklySpecials.Single(x => x.Id == id);
-            return bevarage;
+            var weeklySpecial = _sql.WeeklySpecials.Single(x => x.Id == id);
+            return weeklySpecial;
         }
 
-        public Array GetAllFood()
+        public Array GetAllWeeklySpecial()
         {
             return _sql.WeeklySpecials.ToArray();
         }
 
-        public async Task UpdateFood(WeeklySpecial special)
+        public async Task UpdateWeeklySpecial(WeeklySpecial special)
         {
             if (_sql.WeeklySpecials.Any(x => x.Id == special.Id)) throw new ItemNotFoundException();
             _sql.WeeklySpecials.Update(special);
             await _sql.SaveChangesAsync();
         }
 
-        public async Task RemoveFood(int id)
+        public async Task DeleteWeeklySpecial(int id)
         {
             if (!_sql.WeeklySpecials.Any(x => x.Id == id)) throw new ItemNotFoundException();
             _sql.WeeklySpecials.Remove(_sql.WeeklySpecials.Single(x => x.Id == id));
             await _sql.SaveChangesAsync();  
-        }
-
-        public Task DeleteFood(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

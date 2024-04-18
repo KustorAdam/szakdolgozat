@@ -12,7 +12,7 @@ namespace DB_Module.Models
     public class Cancelation
     {
         [Required][Key] public int Id { get; set; }
-        [Required] public int UserId { get; set; }
+        [Required] public Guid UserId { get; set; }
         [Required] public int WeeklySpecialId { get; set; }
     }
 }

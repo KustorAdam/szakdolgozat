@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace APIModels.Models
 {
-    public class MessageModel
+    public class CancelationModel
     {
         public int Id { get; set; }
-        public string Message { get; set; }
-        public DateTime Time { get; set; }
+        public Guid StudentId { get; set; }
+        public int WeeklySpecialId { get; set; }
     }
 }

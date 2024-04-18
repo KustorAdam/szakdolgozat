@@ -12,3 +12,4 @@ namespace KEK_API.Interfaces
         Task<RegistrationResponse> Registration(RegistrationRequest reg);
     }
 }
+    

@@ -12,7 +12,7 @@ namespace KEK_API.Services
                 new Claim("ID", user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Name),
             });
-            foreach (int rId in user.Roles)
+            foreach (int rId in user.RoleId.ToString())
             {
                 identity.AddClaim(new Claim(ClaimTypes.Role, rId.ToString()));
             }

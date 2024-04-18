@@ -17,10 +17,8 @@ namespace DB_Module.Models
         [Required] public string Password { get; set; }
         [Required] public string Phone {  get; set; }
         [Required] public int OM {  get; set; }
-        [Required] public string ParentName { get; set; }
-        [Required] public string ParentPhone { get; set; }
-
-        [NotMapped]
-        public List<int> Roles { get; set; }
+        [Required] public string P_Name { get; set; }
+        [Required] public string P_Phone { get; set; }
+        public int RoleId { get; set; }
     }
 }

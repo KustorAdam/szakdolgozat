@@ -21,6 +21,7 @@ namespace KEK_API
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddSingleton<IEncryptionService, EncryptionService>();
             builder.Services.AddSingleton<ITokenService, TokenService>();
+            builder.Services.AddScoped<IWeeklySpecialService, WeeklySpecialService>();
 
             builder.Services.AddAuthentication(a =>
             {

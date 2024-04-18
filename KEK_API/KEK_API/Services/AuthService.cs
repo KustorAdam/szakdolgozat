@@ -8,6 +8,7 @@ namespace KEK_API.Services
         public bool IsAuthenticated { get; private set; }
 
         public User CurrentUser { get; private set; }
+
         SQL _sql;
         IEncryptionService _encryptionService;
         ITokenService _tokenService;
@@ -26,12 +27,12 @@ namespace KEK_API.Services
                 var user = this._sql.Users.Single(u => u.Email == login.Email);
                 if (_encryptionService.ValidatePassword(user.Password, login.Password))
                 {
-                    user.Roles = this._sql.UserRoles.Where(a => a.UserId == user.Id).Select(a => a.RoleId).ToList();
+                    user.RoleId = this._sql.UserRoles.Single(a => a.UserId == user.Id).RoleId;
                     return new LoginResponse()
                     {
                         Email = login.Email,
-                        OM = user.OM,
-                        Roles = user.Roles,
+                        Name = user.Name,
+                        RoleId = user.RoleId,
                         Token = _tokenService.CreateToken(user)
                     };
                 }
@@ -74,6 +75,7 @@ namespace KEK_API.Services
             {
                 Email = reg.Email,
                 Name = reg.Name,
+                Phone = reg.Phone,
                 Password = _encryptionService.GenerateHash(reg.Password)
             });
             await this._sql.SaveChangesAsync();

@@ -1,31 +1,29 @@
-﻿using DB_Module.Models;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace KEK_API.Controllers
 {
-    [Route("/menu")]
+    [Route("/WeeklySpecial")]
     [ApiController]
-    public class FoodController : Controller
+    public class WeeklySpecialController : Controller
     {
         private readonly SQL _sql;
-        private FoodService _foodService;
+        private WeeklySpecial _weeklySpecial;
 
-        public FoodController(SQL sql, FoodService foodService)
+        public WeeklySpecialController(SQL sql, WeeklySpecial weeklySpecial)
         {
             _sql = sql;
-            _foodService = foodService;
+            _weeklySpecial = weeklySpecial;
         }
 
-        [HttpGet("GetFood/{id:int}")]
-        public IActionResult GetAllFood(int id)
+        [HttpGet("/GetWeeklySpecial/{id:int}")]
+        public IActionResult GetWeeklySpecial(int id)
         {
             try
             {
                 var res = new GenericResponse<WeeklySpecial>
                 {
-                    Data = _foodService.GetFood(id),
+                    Data = _weeklySpecial.GetWeeklySpecial(id),
                     QueryIsSuccess = true
                 };
                 return Ok(res);
@@ -40,7 +38,7 @@ namespace KEK_API.Controllers
             }
         }
 
-        [HttpGet("GetAllFood")]
+        [HttpGet("/WeeklySpecial")]
         public IActionResult GetAllFood()
         {
             try

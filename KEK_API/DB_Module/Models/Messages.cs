@@ -11,7 +11,7 @@ namespace DB_Module.Models
     [Table("Messages")]
     public class Messages
     {
-        [Required]int Id { get; set; }
+        [Required] int Id { get; set; }
         [Required] string Message { get; set; }
         [Required] DateTime DateTime { get; set; }
     }
