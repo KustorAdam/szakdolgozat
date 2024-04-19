@@ -31,6 +31,7 @@ export default function menu2() {
                     color: "black",
                     fontSize: "15px",
                     lineHeight: "60px"
+                    
 
                 }} type="submit" variant="primary" >Ez a hét</Button>
             </Form.Group>

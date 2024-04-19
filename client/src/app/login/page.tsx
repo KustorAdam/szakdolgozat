@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import React from "react";
 
 
+
 export default function Home() {
   return ( 
     <><><div style={{
@@ -20,12 +21,18 @@ export default function Home() {
       top: "120px"
     }}>Üdvözlünk Csabás Csaba!</label>
      </div>
-
-     <img src={"app/hamburger.jpg"} width={100} height={100} style={{
+    <div>
+     <img src="./images/kep3.jpg" width={200} height={250} style={{
+     
       position: "absolute",
-      left: "300px"
-     }}  alt="" />
+      left: "960px",
+      bottom: "100px",
+      borderRadius: "900px",
 
+      
+      
+     }}  alt="" />
+ </div>
      <div style={{
       position: "absolute", top: "15rem", left: "965px",
       background: "white",

@@ -8,6 +8,7 @@ import { Form, Button, Container } from "react-bootstrap"
 export default function LoginForm() {
 
     return (
+ 
 
         <form>
                  <div style={{
@@ -30,7 +31,6 @@ export default function LoginForm() {
             </div>
 
             <div style={{
-
                 position: "absolute", top: "110px", right: "", left: "17rem",
                 background: "#12427c",
                 border: "1px solid black",
@@ -40,12 +40,6 @@ export default function LoginForm() {
                 height: "30%",
                 boxShadow: "2px 2px 5px",
 
-                    position: "absolute", top: "1rem", right: "", left: "17rem",
-                    background: "#12427c",
-                    border: "1px solid black",
-                    padding: "11rem",
-                    margin: "1rem",
-                    borderRadius: "5rem",
 
             }}>
                 <Form.Group className="mb-3">
@@ -55,14 +49,10 @@ export default function LoginForm() {
                     }}>
                         <Form.Label>Teljes Név</Form.Label>
                     </div>
-
                     <Form.Control style={{ 
                         
                         width: "250px"
                     }}
-
-                    <Form.Control
-
                         type="name"
                         name="Nev"
                     />
@@ -100,6 +90,7 @@ export default function LoginForm() {
                         type="phonenumber"
                         name="dszam"
                     />
+                    
                 </Form.Group>
                 <Form.Group>
                     <Button style={{
