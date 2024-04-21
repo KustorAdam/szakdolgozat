@@ -7,7 +7,7 @@ import { useState } from "react";
 function Menus() {
     const [food, setFood] = useState('')
     const getFood = () => {
-    axios.post('https://localhost:4000/menu', { id }).then(response => {   
+    axios.post('https://localhost:4000/menu', { }).then(response => {   
         console.log(response.data); 
     }).catch(error => {
         console.error('Hiba történt:', error);

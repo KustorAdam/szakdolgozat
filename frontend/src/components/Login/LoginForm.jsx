@@ -6,11 +6,17 @@ import './LoginForm.css'
 
 export default function LoginForm() {
   const [userid, setUserid] = useState(-1);
-  const [email, setEmail] = useState('');
+  const [username, setText] = useState('');
   const [password, setPassword] = useState('');
 
-    console.log(email, password);
-    axios.post('http://localhost:4000/users', { email, password })
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    console.log(username, password);
+    axios.post('http://127.0.0.1:4003/loginusers', { 
+      username: username,
+      password: password
+     })
       .then(res => {
         localStorage.setItem('token', res.data.token);
         try {
@@ -20,31 +26,26 @@ export default function LoginForm() {
           setUserid(payload);
           console.log(payload);
 
-          window.location.href = payload.roleid === 1 ? 'http://localhost:3000/home': "http://localhost:3000/adminpage" 
+          //window.location.href = payload.role_id === 1 ? 'http://localhost:3000/home': "http://localhost:3000/adminpage" 
 
         } catch (error) {
           console.error('Error decoding token:', error);
         }
       })
       .catch(err => console.log(err));
+    }
 
 
       return (
         <div className='container'>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-            <Form.Label>Email cím</Form.Label>
-            <Form.Control 
-                type="email" 
-                name="email"
-            />
+            <Form.Label>Felhasználónév</Form.Label>
+            <Form.Control type="text" value={username} required onChange={e => setText(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3">
             <Form.Label>Jelszó</Form.Label>
-            <Form.Control 
-                type="password" 
-                name="password"
-            />
+            <Form.Control type="password" required onChange={e => setPassword(e.target.value)} />
         </Form.Group>
         <Form.Group>
             <Button type="submit" variant="primary">Bejelentkezés</Button>
@@ -53,6 +54,3 @@ export default function LoginForm() {
     </div>
   )
 }
-
-  
-  
