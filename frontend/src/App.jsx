@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginForm from './components/Login/LoginForm';
-import Menus from './components/Menu/Menus';
+import ThisWeek from './components/Menus/ThisWeek';
+import NextWeek from './components/Menus/NextWeek';
 
 import AdminPage from './pages/AdminPage/AdminPage';
 import MainPage from './pages/MainPage/MainPage';
@@ -11,10 +12,11 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path="/" element={<LoginForm />}/>
-          <Route path="/menu" element={<Menus />} />
+          <Route path="/thisweek" element={<ThisWeek />} />
           <Route path='/home' element={<MainPage />} />
           <Route path='/profil' element={<Profil />} />
-          <Route path='/adminpage' element={<AdminPage />} />'
+          <Route path='/adminpage' element={<AdminPage />} />
+          <Route path='/nextweek' element={<NextWeek />} />
       </Routes>
     </BrowserRouter>
   )

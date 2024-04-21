@@ -1,0 +1,42 @@
+.row-container {
+    justify-content: center;
+  }
+  
+.col-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+  }
+
+
+  
+.cardmenu {
+    margin-top: 600px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+
+  .cardudvozlo {
+    padding: 40px;
+    background-color: lightblue;
+    border: 1px solid #ced4da;
+    border-radius: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; ;
+  }
+  
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+.card-text {
+    margin-top: 10px;
+    font-size: 16px;
+  }
