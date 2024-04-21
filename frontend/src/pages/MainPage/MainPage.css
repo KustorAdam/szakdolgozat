@@ -20,7 +20,7 @@
     border-radius: 5px;
   }
 
-  .cardudvozlo {
+.cardudvozlo {
     padding: 40px;
     background-color: lightblue;
     border: 1px solid #ced4da;
@@ -29,12 +29,12 @@
     font-weight: bold;
     text-align: center;
     color: #333; ;
-  }
+}
   
 .card-header {
     font-size: 18px;
     font-weight: bold;
-  }
+}
   
 .card-text {
     margin-top: 10px;

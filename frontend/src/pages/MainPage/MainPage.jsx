@@ -6,8 +6,8 @@ import "./MainPage.css"
 
 export default function MainPage() {
     return(
-        <Row xs={12} md={4} lg={10} className="row-container">      
-        <NavBar />
+        <Row xs={12} md={4} lg={10} className="row-container"> 
+        <NavBar />     
             <Col className="col-content">    
             <Card className="cardudvozlo">
                 Üdvözlünk

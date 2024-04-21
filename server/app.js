@@ -17,14 +17,23 @@ app.use(cookieParser());
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "titok",
+    password: "password",
     database: "kek_db"
+})
+
+
+app.post('/cancelationadd', (req, res) => {
+    console.log(req.body.userid)
+    console.log(req.body.weeklysepcialid)
+    if (err) return res.json("hiba")
+
+    const sql = 'INSERT INTO cancelations WHERE'
 })
 
 
 app.post('/loginusers', (req, res) => {
     console.log(req.body.username)
-    if (err) return res.json ("hiba")
+    
 
     const sql = 'SELECT * FROM users WHERE name = ?';
     db.query(sql, [req.body.username], (err, data) => {
@@ -39,7 +48,7 @@ app.post('/loginusers', (req, res) => {
 
                         const id = data[0].id;
                         const role_id = data[0].role_id;
-
+                        
                         const token = jwt.sign({id, role_id}, "jwt-secret-key", {expiresIn: 84600});
                         res.cookie('token', token, { httpOnly: true });
                         console.log(token)
@@ -52,59 +61,6 @@ app.post('/loginusers', (req, res) => {
         return res.json({Error: "Hibás Felhasználó vagy Jelszó"});
     }})
 })
-
-/*const plainTextPassword = 'admin123';
-bcrypt.hash(plainTextPassword, salt, function(err, hash) {
-    if (err) {
-        // Handle error
-    } else {
-        // Store the hash in the database
-
-
-    }
-});*/
-
-
-app.post('/addcancelation', (req, res) => {
-    const sql = `INSERT INTO cancelation ( ClassName) VALUES (?)`;
-    db.query(sql, [req.body.classname], (err, data) => {
-        if (err) {
-            console.error(err);
-            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
-        }
-        return res.json(data)
-
-    
-    })
-})
-
-
-app.post('/deleteclass', (req, res) => {
-    db.query('SET FOREIGN_KEY_CHECKS = 0', (error, results) => {
-        if (error) {
-            console.error(error);
-            return res.json({ Error: 'Error disabling foreign key checks' });
-        }
-
-        const sql = "DELETE FROM class WHERE ClassName = ?";
-        db.query(sql, [req.body.classname], (err, data) => {
-            console.log(req.body.classname)
-            if (err) {
-                console.error(err);
-                return res.json({ Error: 'Error deleting class' });
-            }
-            
-            db.query('SET FOREIGN_KEY_CHECKS = 1', (fkError, fkResults) => {
-                if (fkError) {
-                    console.error(fkError);
-                    return res.json({ Error: 'Error enabling foreign key checks' });
-                }
-                
-                return res.json(data);
-            });
-        });
-    });
-});
 
 app.post('/adminusers', (req, res) => {
     const sql = 'SELECT * FROM users';
@@ -136,7 +92,7 @@ app.post('/adminuseractivation', (req, res) => {
     })
 })
 
-app.post('/newuser', (req, res) => {
+app.post('/adduser', (req, res) => {
     const plainTextPassword = req.body.password;
     let hashedpassword ="";
     bcrypt.hash(plainTextPassword, salt, function(err, hash) {
@@ -164,7 +120,7 @@ app.post('/newuser', (req, res) => {
     
 })
 
-app.post('/changeclass', (req, res) => {
+app.post('/updateuser', (req, res) => {
     const sql = ` UPDATE users SET class_Id = ?  WHERE id = ?` ;
     db.query(sql, [req.body.class,req.body.userid], (err, data) => {
         if (err) {
@@ -177,7 +133,7 @@ app.post('/changeclass', (req, res) => {
     })
 })
 
-app.post('/changeemail', (req, res) => {
+app.post('/updatecancelation', (req, res) => {
     const sql = ` UPDATE users SET Email = ?  WHERE id = ?` ;
     db.query(sql, [req.body.email,req.body.userid], (err, data) => {
         if (err) {
@@ -195,6 +151,46 @@ app.post('/receiveusername', (req, res) => {
     const sql = 'SELECT Username FROM users WHERE id=?';
     db.query(sql, [req.body.realuserid], (err, data) => {
         
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/menuthisweek', (req, res) => {
+    const sql = 'SELECT * FROM weeklyspecial WHERE id BETWEEN 1 AND 5';
+    db.query(sql, [], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/menunextweek', (req, res) => {
+    const sql = 'SELECT * FROM weeklyspecial WHERE id BETWEEN 6 AND 10';
+    db.query(sql, [], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+
+app.post('/cancelday', (req, res) => {
+    const sql = `INSERT INTO cancelation ( user_id,weeklyspecial_id) VALUES (?,?)`;
+    db.query(sql, [req.body.studentid,req.body.weeklyspecial], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
         return res.json(data)
 
     

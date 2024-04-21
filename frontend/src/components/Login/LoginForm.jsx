@@ -13,7 +13,7 @@ export default function LoginForm() {
     event.preventDefault();
 
     console.log(username, password);
-    axios.post('http://127.0.0.1:4003/loginusers', { 
+    axios.post('http://127.0.0.1:4004/loginusers', { 
       username: username,
       password: password
      })
@@ -26,7 +26,7 @@ export default function LoginForm() {
           setUserid(payload);
           console.log(payload);
 
-          //window.location.href = payload.role_id === 1 ? 'http://localhost:3000/home': "http://localhost:3000/adminpage" 
+          window.location.href = payload.role_id === 1 ? 'http://localhost:3000/home': "http://localhost:3000/adminpage" 
 
         } catch (error) {
           console.error('Error decoding token:', error);
