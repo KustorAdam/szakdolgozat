@@ -14,19 +14,23 @@ export default function Profil() {
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Email cím</Form.Label>
-                    <Form.Control type="text" name="text"/>
+                    <Form.Control type="text" />
+                </FormGroup>
+                <FormGroup>
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" />
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Telefonszám</Form.Label>
-                    <Form.Control type="phone" name="text"/>
+                    <Form.Control type="phone" />
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Szülő neve</Form.Label>
-                    <Form.Control type="text" name="text"/>
+                    <Form.Control type="text" />
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Szülő telefonszáma</Form.Label>
-                    <Form.Control type="phone" name="text"/>
+                    <Form.Control type="phone" />
                 </FormGroup>
 
                 <Button variant="primary" type="submit">

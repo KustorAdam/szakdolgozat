@@ -56,6 +56,7 @@ function ThisWeek() {
 
     return(
             <Container className="containercards">
+                <NavBar />
                 <Form.Group>
                     </Form.Group>
                 { food.length>0 && (
@@ -78,7 +79,7 @@ function ThisWeek() {
                         <Card.Text>{food[1].lunch}</Card.Text>
                         <Card.Text>{food[1].dinner}</Card.Text>
 
-                        <Button className="lemondas" disabled={disableddays.includes(7)}  onClick={()=> handleCancellation(7)}>Lemondás</Button>
+                        <Button className="lemondas" variant="primary" disabled={disableddays.includes(7)}  onClick={()=> handleCancellation(7)}>Lemondás</Button>
                     </Card>
                 </Col>
                 <Col xs={10} md={4} lg={6}>

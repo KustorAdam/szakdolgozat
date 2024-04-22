@@ -9,7 +9,10 @@ function NavBar() {
       <Nav className="mr-auto">
         <li className='blue'>KÉK</li>
       <li>
-        <Nav.Link className='menupoint' href="/thisweek">Menü</Nav.Link>
+        <Nav.Link className='menupoint' href="/thisweek">Ez a hét</Nav.Link>
+        </li>
+        <li>
+        <Nav.Link className='nextweek' href="/thisweek">Jövő hét</Nav.Link>
         </li>
         <li>
         <Nav.Link className='menupoint2' href="/">Kijelentkezés</Nav.Link>

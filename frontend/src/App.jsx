@@ -13,7 +13,6 @@ function App() {
       <Routes>
           <Route path="/" element={<LoginForm />}/>
           <Route path="/thisweek" element={<ThisWeek />} />
-          <Route path='/home' element={<MainPage />} />
           <Route path='/profil' element={<Profil />} />
           <Route path='/adminpage' element={<AdminPage />} />
           <Route path='/nextweek' element={<NextWeek />} />

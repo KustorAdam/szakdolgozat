@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Container, Card, Col, Row } from "react-bootstrap"
+import { Form, Button, Container, Card, Col, Row, FormGroup } from "react-bootstrap"
 import './Menu.css'
 import axios from "axios";
 import { useState,useEffect } from "react";
@@ -56,7 +56,7 @@ function ThisWeek() {
 
     return( 
         <Container className="containercards">   
-            <Row>
+            
                 <NavBar />
                 
                 {food.length>0 && (
@@ -67,9 +67,12 @@ function ThisWeek() {
                         <Card.Text>{food[0].breakfast}</Card.Text>
                         <Card.Text>{food[0].lunch}</Card.Text>
                         <Card.Text>{food[0].dinner}</Card.Text>
+
+                        <Button className="lemondas" disabled={disableddays.includes(1)}  onClick={()=> handleCancellation(1)}>Lemondás</Button>
+
                     </Card>
                 </Col>
-                    <Button className="lemondas" disabled={disableddays.includes(1)}  onClick={()=> handleCancellation(1)}>Lemondás</Button>
+                    
                 
                 <Col xs={10} md={4} lg={4}>
                     <Card className="card">
@@ -77,9 +80,12 @@ function ThisWeek() {
                         <Card.Text>{food[1].breakfast}</Card.Text>
                         <Card.Text>{food[1].lunch}</Card.Text>
                         <Card.Text>{food[1].dinner}</Card.Text>
+
+                        <Button className="lemondas" disabled={disableddays.includes(2)}  onClick={() => handleCancellation(2)}>Lemondás</Button>
+
                     </Card>
                 </Col>
-                    <Button className="lemondas" disabled={disableddays.includes(2)}  onClick={() => handleCancellation(2)}>Lemondás</Button>
+                    
                 
                 <Col xs={10} md={4} lg={4}>
                     <Card className="card">
@@ -87,9 +93,12 @@ function ThisWeek() {
                         <Card.Text>{food[2].breakfast}</Card.Text>
                         <Card.Text>{food[2].lunch}</Card.Text>
                         <Card.Text>{food[2].dinner}</Card.Text>
+
+                        <Button className="lemondas" disabled={disableddays.includes(3)}  onClick={() => handleCancellation(3)}>Lemondás</Button>
+
                     </Card>
                 </Col>
-                    <Button className="lemondas" disabled={disableddays.includes(3)}  onClick={() => handleCancellation(3)}>Lemondás</Button>
+                    
                 
                 <Col xs={10} md={4} lg={4}>
                     <Card className="card">
@@ -97,9 +106,12 @@ function ThisWeek() {
                         <Card.Text>{food[3].breakfast}</Card.Text>
                         <Card.Text>{food[3].lunch}</Card.Text>
                         <Card.Text>{food[3].dinner}</Card.Text>
+
+                        <Button className="lemondas" disabled={disableddays.includes(4)}  onClick={() =>handleCancellation(4)}>Lemondás</Button>
+
                     </Card>
                 </Col>
-                    <Button className="lemondas" disabled={disableddays.includes(4)}  onClick={() =>handleCancellation(4)}>Lemondás</Button>
+                    
                 
                 <Col xs={10} md={4} lg={4}>
                     <Card className="card">
@@ -107,12 +119,15 @@ function ThisWeek() {
                         <Card.Text>{food[4].breakfast}</Card.Text>
                         <Card.Text>{food[4].lunch}</Card.Text>
                         <Card.Text>-</Card.Text>
+
+                        <Button className="lemondas" disabled={disableddays.includes(5)}  onClick={() => handleCancellation(5)}>Lemondás</Button>
+                        
                     </Card>
                 </Col>
-                    <Button className="lemondas" disabled={disableddays.includes(5)}  onClick={() => handleCancellation(5)}>Lemondás</Button>
+                    
             </>
         )}       
-    </Row> 
+    
 </Container>      
 )
 }
