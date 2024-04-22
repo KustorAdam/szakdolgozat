@@ -12,7 +12,7 @@ function NavBar() {
         <Nav.Link className='menupoint' href="/thisweek">Ez a hét</Nav.Link>
         </li>
         <li>
-        <Nav.Link className='nextweek' href="/thisweek">Jövő hét</Nav.Link>
+        <Nav.Link className='nextweek' href="/nextweek">Jövő hét</Nav.Link>
         </li>
         <li>
         <Nav.Link className='menupoint2' href="/">Kijelentkezés</Nav.Link>
