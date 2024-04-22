@@ -72,25 +72,7 @@ app.post('/adminusers', (req, res) => {
     })
 })
 
-app.post('/adminuserdeactivation', (req, res) => {
-    const sql = ` UPDATE users SET Enable = 0  WHERE id = ?` ;
-    db.query(sql, [req.body.id], (err, data) => {
-        
-        return res.json(data)
 
-    
-    })
-})
-
-app.post('/adminuseractivation', (req, res) => {
-    const sql = ` UPDATE users SET Enable = 1  WHERE id = ?` ;
-    db.query(sql, [req.body.id], (err, data) => {
-        
-        return res.json(data)
-
-    
-    })
-})
 
 app.post('/adduser', (req, res) => {
     const plainTextPassword = req.body.password;
@@ -195,6 +177,194 @@ app.post('/cancelday', (req, res) => {
 
     
     })
+})
+
+app.post('/changepassword', (req, res) => {
+    const plainTextPassword = req.body.password;
+    let hashedpassword ="";
+    bcrypt.hash(plainTextPassword, salt, function(err, hash) {
+        if (err) {
+            console.log("Error in hash")
+        } else {
+            
+            hashedpassword = hash
+            
+            const sql = ` UPDATE users SET Password = ?  WHERE id = ?` ;
+            db.query(sql, [hashedpassword,req.body.userid], (err, data) => {
+                if (err) {
+                    console.error(err);
+                    return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+                }
+
+
+                return res.json(data)
+
+    
+    })
+        
+        }
+});
+    
+})
+
+app.post('/changeemail', (req, res) => {
+    const sql = ` UPDATE users SET email = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.email,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changephone', (req, res) => {
+    const sql = ` UPDATE users SET phone = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.phone,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changep_name', (req, res) => {
+    const sql = ` UPDATE users SET p_name = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.p_name,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changep_phone', (req, res) => {
+    const sql = ` UPDATE users SET p_phone = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.p_phone,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/admincencalation', (req, res) => {
+    const sql = 'SELECT * FROM cancelation';
+    db.query(sql, [], (err, data) => {
+        
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/deletecancelation', (req, res) => {
+    const sql = 'DELETE FROM cancelation WHERE id=?';
+    db.query(sql, [req.body.cancelationid], (err, data) => {
+        
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/adminweeklyspecial', (req, res) => {
+    const sql = 'SELECT * FROM weeklyspecial';
+    db.query(sql, [], (err, data) => {
+        
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changebreakfast', (req, res) => {
+    const sql = ` UPDATE weeklyspecial SET breakfast = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.newbreakfast,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changelunch', (req, res) => {
+    const sql = ` UPDATE weeklyspecial SET lunch = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.newlunch,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changedinner', (req, res) => {
+    const sql = ` UPDATE weeklyspecial SET dinner = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.newdinner,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+app.post('/changeday', (req, res) => {
+    const sql = ` UPDATE weeklyspecial SET day = ?  WHERE id = ?` ;
+    db.query(sql, [req.body.newday,req.body.userid], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+
+    
+    })
+})
+
+
+
+app.post('/createnewuser', (req, res) => {
+    const plainTextPassword = req.body.addpassword;
+    let hashedpassword ="";
+    bcrypt.hash(plainTextPassword, salt, function(err, hash) {
+        if (err) {
+            console.log("Error in hash")
+        } else {
+            
+            hashedpassword = hash
+    const sql = `INSERT INTO users ( name,password,email,phone,p_name,p_phone,role_id) VALUES (?,?,?,?,?,?,?)`;
+    db.query(sql, [req.body.addname,hashedpassword,req.body.addemail,req.body.addphone,req.body.p_name,req.body.p_phone,req.body.role_id], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.json({ Error: 'Hiba a válaszok beszúrásakor' });
+        }
+        return res.json(data)
+    
+
+    
+    })
+    }
+})
 })
 
 

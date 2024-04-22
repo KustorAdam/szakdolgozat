@@ -54,66 +54,68 @@ function ThisWeek() {
 
 
 
-    return(       
+    return( 
+        <Container className="containercards">   
             <Row>
                 <NavBar />
+                
                 {food.length>0 && (
                     <>
-                <Col xs={10} md={4} lg={6}>
+                <Col xs={10} md={4} lg={4}>
                     <Card className="card">
                         <Card.Title>Hétfő</Card.Title>
                         <Card.Text>{food[0].breakfast}</Card.Text>
                         <Card.Text>{food[0].lunch}</Card.Text>
                         <Card.Text>{food[0].dinner}</Card.Text>
                     </Card>
-
-                    <Button className="lemondas" disabled={disableddays.includes(1)}  onClick={()=> handleCancellation(1)}>Lemondás</Button>
                 </Col>
-                <Col xs={10} md={4} lg={6}>
+                    <Button className="lemondas" disabled={disableddays.includes(1)}  onClick={()=> handleCancellation(1)}>Lemondás</Button>
+                
+                <Col xs={10} md={4} lg={4}>
                     <Card className="card">
                         <Card.Title>Kedd</Card.Title>
                         <Card.Text>{food[1].breakfast}</Card.Text>
                         <Card.Text>{food[1].lunch}</Card.Text>
                         <Card.Text>{food[1].dinner}</Card.Text>
                     </Card>
-
-                    <Button className="lemondas" disabled={disableddays.includes(2)}  onClick={() => handleCancellation(2)}>Lemondás</Button>
                 </Col>
-                <Col xs={10} md={4} lg={6}>
+                    <Button className="lemondas" disabled={disableddays.includes(2)}  onClick={() => handleCancellation(2)}>Lemondás</Button>
+                
+                <Col xs={10} md={4} lg={4}>
                     <Card className="card">
                         <Card.Title>Szerda</Card.Title>
                         <Card.Text>{food[2].breakfast}</Card.Text>
                         <Card.Text>{food[2].lunch}</Card.Text>
                         <Card.Text>{food[2].dinner}</Card.Text>
                     </Card>
-
-                    <Button className="lemondas" disabled={disableddays.includes(3)}  onClick={() => handleCancellation(3)}>Lemondás</Button>
                 </Col>
-                <Col xs={10} md={4} lg={6}>
+                    <Button className="lemondas" disabled={disableddays.includes(3)}  onClick={() => handleCancellation(3)}>Lemondás</Button>
+                
+                <Col xs={10} md={4} lg={4}>
                     <Card className="card">
                         <Card.Title>Csütörtök</Card.Title>
                         <Card.Text>{food[3].breakfast}</Card.Text>
                         <Card.Text>{food[3].lunch}</Card.Text>
                         <Card.Text>{food[3].dinner}</Card.Text>
                     </Card>
-
-                    <Button className="lemondas" disabled={disableddays.includes(4)}  onClick={() =>handleCancellation(4)}>Lemondás</Button>
                 </Col>
-                <Col xs={10} md={4} lg={6}>
+                    <Button className="lemondas" disabled={disableddays.includes(4)}  onClick={() =>handleCancellation(4)}>Lemondás</Button>
+                
+                <Col xs={10} md={4} lg={4}>
                     <Card className="card">
                         <Card.Title>Péntek</Card.Title>
                         <Card.Text>{food[4].breakfast}</Card.Text>
                         <Card.Text>{food[4].lunch}</Card.Text>
                         <Card.Text>-</Card.Text>
                     </Card>
-
-                    <Button className="lemondas" disabled={disableddays.includes(5)}  onClick={() => handleCancellation(5)}>Lemondás</Button>
                 </Col>
-                </>
-)}
-              </Row> 
-              
-    )
+                    <Button className="lemondas" disabled={disableddays.includes(5)}  onClick={() => handleCancellation(5)}>Lemondás</Button>
+            </>
+        )}       
+    </Row> 
+</Container>      
+)
 }
+
 
 export default ThisWeek;

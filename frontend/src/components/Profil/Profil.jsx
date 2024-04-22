@@ -1,4 +1,4 @@
-import { Col, FormGroup, Row, Form, Button } from "react-bootstrap";
+import { Col, FormGroup, Row, Form, Button, FormLabel } from "react-bootstrap";
 import "./Profil.css"
 
 export default function Profil() {
@@ -7,6 +7,7 @@ export default function Profil() {
         <Row>
             <Col>
             <form className="form">
+                <FormLabel className="formlabel">Adatok frissítése</FormLabel>
                 <FormGroup>
                     <Form.Label>Teljes Név</Form.Label>
                     <Form.Control type="text" name="text"/>

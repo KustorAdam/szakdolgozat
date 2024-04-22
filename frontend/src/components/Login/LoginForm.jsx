@@ -26,7 +26,7 @@ export default function LoginForm() {
           setUserid(payload);
           console.log(payload);
 
-          window.location.href = payload.role_id === 1 ? 'http://localhost:3000/home': "http://localhost:3000/adminpage" 
+          window.location.href = payload.role_id === 1 ? 'http://localhost:3000/thisweek': "http://localhost:3000/adminpage" 
 
         } catch (error) {
           console.error('Error decoding token:', error);
@@ -37,7 +37,7 @@ export default function LoginForm() {
 
 
       return (
-        <div className='container'>
+        <div className='logincontainer'>
         <form className="form" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
             <Form.Label>Felhasználónév</Form.Label>

@@ -1,0 +1,48 @@
+.scrollable-table {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .adminpage-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .adminpage-table th,
+  .adminpage-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .adminpage-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .adminpage-table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .input-group button:hover {
+    background-color: #0056b3;
+  }
+  
+

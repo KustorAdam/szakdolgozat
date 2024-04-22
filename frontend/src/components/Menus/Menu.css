@@ -1,17 +1,29 @@
 .card {
+    text-align: center;
     background-color: #f8f9fa; 
     border: 1px solid #dee2e6; 
     border-radius: 5px; 
     margin-bottom: 20px; 
-  }
+    width: 200px;
+}
   
   
-  .card .card-title {
+.card .card-title {
     font-size: 1.5rem; 
     font-weight: bold; 
-  }
+}
   
-  .card .card-text {
+.card .card-text {
     font-size: 1.2rem; 
     margin-bottom: 5px; 
-  }
+}
+
+.lemondas {
+  background-color: #007bff;
+}
+
+.containercards {
+  padding: 25%;
+  display: grid;
+}
+

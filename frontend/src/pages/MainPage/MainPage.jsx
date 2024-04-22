@@ -13,10 +13,10 @@ export default function MainPage() {
                 Üdvözlünk
             </Card>
                 <Card className="cardmenu">
-                    <CardHeader>Mai Menü</CardHeader>
-                    <CardText>reggeli</CardText>
-                    <CardText>ebéd</CardText>
-                    <CardText>vacsora</CardText>
+                    <CardHeader className="header">Mai Menü</CardHeader>
+                    <CardText className="ctext">reggeli</CardText>
+                    <CardText className="ctext">ebéd</CardText>
+                    <CardText className="ctext">vacsora</CardText>
                 </Card>
             </Col>
         </Row> 
