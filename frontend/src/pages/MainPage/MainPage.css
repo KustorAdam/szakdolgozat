@@ -1,44 +1,40 @@
-/* MainPage.css */
 
-/* Konténer sor */
 .row-container {
   display: flex;
-  justify-content: center; /* Tartalom középre igazítása a vízszintes tengelyen */
-  align-items: center; /* Tartalom középre igazítása a függőleges tengelyen */
-  height: 100vh; /* Teljes képernyős magasság */
-  background-color: #f8f9fa; /* Világosszürke háttérszín */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: #f8f9fa; 
 }
 
-/* Tartalom oszlop */
+
 .col-content {
-  text-align: center; /* Tartalom középre igazítása */
+  text-align: center; 
 }
 
-/* Üdvözlő kártya */
 .cardudvozlo {
-  background-color: #007bff; /* Kék háttérszín */
-  color: #fff; /* Fehér szövegszín */
+  background-color: #007bff; 
+  color: #fff; 
   padding: 20px;
-  border-radius: 10px; /* Kerekített sarkok */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Menü kártya */
 .cardmenu {
-  margin-top: 20px; /* Felső margó */
-  background-color: #fff; /* Fehér háttérszín */
+  margin-top: 20px; 
+  background-color: #fff; 
   padding: 20px;
-  border-radius: 10px; /* Kerekített sarkok */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Fejléc szöveg */
+
 .header {
   font-size: 24px;
-  margin-bottom: 10px; /* Alsó margó */
+  margin-bottom: 10px; 
 }
 
-/* Menüpontok szövege */
+
 .ctext {
-  margin-bottom: 5px; /* Alsó margó */
+  margin-bottom: 5px; 
 }
