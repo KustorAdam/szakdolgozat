@@ -4,24 +4,19 @@ import './Navbar.css'
 
 function NavBar() {
   return (
-  <Nav className="justify-content-center" activeKey="/home">
-    <Nav.Item>
-      <Nav.Link href="/home">Főoldal</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="/thisweek">Heti menü</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="/nextweek">Jövő heti menü</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="/profil">Profil</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link href="/">Kijelentkezés</Nav.Link>
-    </Nav.Item>
-  </Nav>
-)
+    <Navbar bg="blue" variant="blue">
+      <Navbar.Brand  href="/profil">Profil</Navbar.Brand>
+      <Nav className="mr-auto">
+        <li className='blue'>KÉK</li>
+      <li>
+        <Nav.Link className='menupoint' href="/thisweek">Menü</Nav.Link>
+        </li>
+        <li>
+        <Nav.Link className='menupoint2' href="/">Kijelentkezés</Nav.Link>
+        </li>
+      </Nav>
+    </Navbar>
+  );
 }
 
 export default NavBar;
